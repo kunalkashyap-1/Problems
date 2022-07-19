@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int findKthLargest(vector<int> nums, int k) {
+int findKthLargest(vector<int> &nums, int k) {
     sort(nums.begin(),nums.end());
     int n=nums.size();
     int arr[n],j=0;

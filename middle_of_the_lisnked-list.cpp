@@ -1,11 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//Fast and slow pointers
-//Fast move 2 nodes per iteration 
-//slow moves 1 node per iteration
+// Fast and slow pointers
+// Fast move 2 nodes per iteration
+// slow moves 1 node per iteration
 
-struct ListNode {
+struct ListNode
+{
     int val;
     ListNode *next;
     ListNode() : val(0), next(nullptr) {}
@@ -13,16 +14,17 @@ struct ListNode {
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-
-class Solution {
+class Solution
+{
 public:
-    ListNode* middleNode(ListNode* head) {
-        ListNode * slow=head;
-        ListNode * fast=head;
-        while (fast!=NULL && fast->next!=NULL)
+    ListNode *middleNode(ListNode *head)
+    {
+        ListNode *slow = head;
+        ListNode *fast = head;
+        while (fast != NULL && fast->next != NULL)
         {
-            slow=slow->next;
-            fast=fast->next->next;
+            slow = slow->next;
+            fast = fast->next->next;
         }
         return slow;
     }
@@ -30,6 +32,6 @@ public:
 
 int main()
 {
-    
+
     return (0);
 }
